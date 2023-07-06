@@ -8,6 +8,10 @@ app.use(express.json())
 app.use(cors())
 app.use("/book", BookRoute)
 
+app.get("/",(req,res)=>{
+    res.send("Welcome to Book App");
+})
+
 app.listen(4500, async () => {
 
     try {
